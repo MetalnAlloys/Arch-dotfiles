@@ -1,0 +1,94 @@
+[[icons]]
+name = "awesome"
+[icons.overrides]
+cpu = " "
+memory_mem = "MEM:" 
+music = "" 
+#update = ""
+#volume_full = " "
+#volume_half = " "
+
+[theme]
+name = "solarized-dark"
+[theme.overrides]
+idle_bg = "#2a2426" #"#363432"  #"#282c34"# "#222433" #3a3a3a" #"#296873"
+idle_fg = "#5b5b5b"       #"#837d7a"  #"#55606d"# "#5d6872"        # #949494" #"#c4c7c7"
+info_bg = "#89beba"         #"#628b97"  #6e88a6"# "#6f78be"#"#00875f"         #"#6faeaf"
+info_fg = "#203a41"          #"#363432"   #"#282c34"# "#222433"#"#dadada"           #"#233439"
+good_bg = "#87af87"         ##7bb292"   #"#87af87" #"#73c1a9"#"#00d75f"
+good_fg = "#333b2f"          #"#363432"   #"#282c34"    #"#303030"
+warning_bg = "#ec5f67"  #"#e06c75"
+warning_fg = "#282c34"  ##232433"
+critical_bg = "#ea6963"  #"#d7afaf"#"#875f87"
+critical_fg = "#282c34"  #"#232433"
+
+
+[[block]]
+block = "pacman"
+interval = 10
+
+[[block]]
+block = "disk_space"
+
+path = "/"
+alias = "/"
+info_type = "available"
+unit = "GB"
+interval = 20
+
+
+[[block]]
+block = "net"
+device = "wlp1s0"
+ssid = true
+interval = 5
+
+
+
+
+
+
+#[[block]]
+#block = "backlight"
+#device = "intel_backlight"
+
+
+[[block]]
+block = "memory"
+display_type= "memory"
+format_mem = "[{Mup}%]"
+format_swap = "[{SUp}%]"
+
+[[block]]
+block = "cpu"
+interval = 1
+format = "{barchart} {utilization}% {frequency}GHz"
+
+[[block]]
+block = "weather"
+format = "{weather}|{temp}°C"  #, {wind} m/s {direction}"
+service = { name = "openweathermap", api_key = "ba2f1572e645eb9fb8c839c416f5b4f0", city_id = "3133880", units = "metric" }
+
+
+
+
+[[block]]
+block = "time"
+interval = 60
+format = "%a %d/%m |%R|" 
+
+[[block]]
+block = "sound"
+
+
+[[block]]
+block = "music"
+player = "spotify"
+buttons = ["play"]
+
+[[block]]
+block = "battery"
+interval = 10
+format = "{percentage}%"
+
+
